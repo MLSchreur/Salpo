@@ -1,0 +1,15 @@
+* {
+    color: rgb(14, 14, 75);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h3 {
+    padding-top: 200px;
+    text-align: center;
+}
+
+h3 {
+    padding-top: 20px;
+}
+
+
