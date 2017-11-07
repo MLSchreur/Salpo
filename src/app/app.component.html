@@ -7,4 +7,12 @@
   <button (click)="getOwner()">Get ownerList</button>
 </div>
 
+<div *ngIf="allOwner">
+  <h2>Alle owners</h2>
+  <ul>
+      <li *ngFor="let owner of allOwner"><strong>{{ owner.firstName }} {{ owner.lastName }}</strong><br>{{ owner.email }}</li>
+      <!-- let = typescript versie van var (variabele)-->
+  </ul>
+</div>
+
 <app-footer></app-footer>
