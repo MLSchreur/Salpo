@@ -16,8 +16,8 @@ export class AppGlobalService{
 
         switch(hostName.substring(0,6)) {
             case "localh": this.baseUrl = "http://localhost:8081/api"; break;
-            //case "localh": this.baseUrl = "https://tick-app.herokuapp.com/api"; break;
-            case "salpo.": this.baseUrl = "https://tick-app.herokuapp.com/api"; break;
+            //case "localh": this.baseUrl = "https://tickitt.herokuapp.com/api"; break;
+            case "salpo.": this.baseUrl = "https://tickitt.herokuapp.com/api"; break;
         }
         console.log("Base url: " + this.baseUrl);
     }
