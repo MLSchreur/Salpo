@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppGlobalService } from './app.global.service';
+import { OwnerComponent } from './owner/owner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    OwnerComponent
   ],
   imports: [
     BrowserModule,

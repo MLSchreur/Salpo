@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Owner } from './owner';
+import { Owner } from './owner/owner';
 import { AppService } from './app.service';
 import { NgModel } from "@angular/forms";
 
