@@ -1,14 +1,19 @@
-<p>
-  owner works!
-</p>
-
 <h3>Nieuwe owner aanmaken</h3>
 
-    <input class="invoer" [(ngModel)]="ownerAanmaken.firstName" placeholder="Voornaam" id="gebruikerVoornaam"><br>
-    <input class="invoer" [(ngModel)]="ownerAanmaken.insertion" placeholder="Tussenvoegsel"><br>
-    <input class="invoer" [(ngModel)]="ownerAanmaken.lastName" placeholder="Achternaam"><br>
-    <input class="invoer" [(ngModel)]="ownerAanmaken.username" placeholder="Gebruikersnaam"><br>
-    <input class="invoer" [(ngModel)]="ownerAanmaken.password" placeholder="Wachtwoord"><br>
-    <label class="button" id="opslaan">
-    <button (click)="postOwner()">Opslaan</button>
-    </label>
+<input class="invoer" [(ngModel)]="ownerAanmaken.firstName" placeholder="Voornaam" id="gebruikerVoornaam"><br>
+<input class="invoer" [(ngModel)]="ownerAanmaken.insertion" placeholder="Tussenvoegsel"><br>
+<input class="invoer" [(ngModel)]="ownerAanmaken.lastName" placeholder="Achternaam"><br>
+<input class="invoer" [(ngModel)]="ownerAanmaken.email" placeholder="Email adres"><br>
+<input class="invoer" [(ngModel)]="ownerAanmaken.username" placeholder="Gebruikersnaam"><br>
+<input class="invoer" [(ngModel)]="ownerAanmaken.password" placeholder="Wachtwoord"><br>
+<label class="button" id="opslaan">
+  <button (click)="postOwner()">Opslaan</button>
+</label>
+
+<div *ngIf="allOwner">
+  <h3>Alle owners</h3>
+  <ul>
+      <li *ngFor="let owner of allOwner"><strong>{{ owner.firstName }} {{ owner.lastName }}</strong><br>{{ owner.email }}</li>
+      <!-- let = typescript versie van var (variabele)-->
+  </ul>
+</div>

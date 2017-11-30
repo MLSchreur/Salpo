@@ -20,4 +20,8 @@ export class OwnerService {
     console.log("owner.service - postOwner");
     return this.http.post(this.baseUrl, JSON.stringify(owner), { headers: this.headers }).map(res => res.text());
   }
+
+  getOwner(): Observable<Owner[]> {
+    return this.http.get(this.baseUrl).map(res => res.json());
+  }
 }
