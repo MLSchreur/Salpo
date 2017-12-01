@@ -19,6 +19,7 @@ export class OwnerComponent implements OnInit {
   ownerId:        number;
   allOwner: Owner[];
   owner: Owner;
+  id: number;
 
   postOwner(){
     console.log(this.ownerAanmaken);
