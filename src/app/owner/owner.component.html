@@ -27,7 +27,7 @@
 <div *ngIf="allOwner">
   <h3>Gebruikers</h3>
   <ul>
-      <li *ngFor="let owner of allOwner"><strong>{{ owner.firstName }} {{ owner.lastName }}</strong><br>{{ owner.email }}</li>
+      <li *ngFor="let owner of allOwner"><strong>{{ owner.id }} {{ owner.firstName }} {{ owner.lastName }}</strong><br>{{ owner.email }}</li>
       <!-- let = typescript versie van var (variabele)-->
   </ul>
 </div>
