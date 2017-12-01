@@ -18,6 +18,7 @@ export class OwnerComponent implements OnInit {
   ownerAanmaken:  Owner = new Owner;
   ownerId:        number;
   allOwner: Owner[];
+  owner: Owner;
 
   postOwner(){
     console.log(this.ownerAanmaken);
@@ -33,6 +34,13 @@ export class OwnerComponent implements OnInit {
       console.log("Alle owners, succes!");
       console.log(allOwner);
       this.allOwner = allOwner;
+    });
+  }
+
+  getOwnerById(id: number) {
+    console.log("in getOwnerById()");
+    this.ownerService.getOwnerById(id).subscribe(owner => {
+      this.owner = owner;
     });
   }
 

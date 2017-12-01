@@ -14,7 +14,4 @@ export class AppService {
     private headers = new Headers ({'Content-Type' : 'application/json'});
     private baseUrl: string   = this.appGlobalService.baseUrl + "/owner";
 
-    getOwnerById(id: number): Observable<Owner> {
-        return this.http.get(this.baseUrl + "/" + id).map(res => res.json());
-    }
 }
