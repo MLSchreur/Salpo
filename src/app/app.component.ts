@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Owner } from './owner';
+import { Owner } from './owner/owner';
 import { AppService } from './app.service';
+import { NgModel } from "@angular/forms";
 
 
 @Component({
@@ -13,19 +14,8 @@ import { AppService } from './app.service';
 
 export class AppComponent {
 
-  owner: Owner;
-  allOwner: Owner[];
-
   constructor(private appService: AppService){
     console.log('App werkt!'); 
   }
-
-  getOwner() {
-    console.log("in getOwner()")
-    this.appService.getOwner().subscribe(allOwner => {
-      console.log("Alle owners, succes!");
-      console.log(allOwner);
-      this.allOwner = allOwner;
-    });
-  }
+  
 }

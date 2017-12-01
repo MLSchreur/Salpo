@@ -1,0 +1,33 @@
+<h3>Gebruiker aanmaken</h3>
+
+<input class="invoer" [(ngModel)]="ownerAanmaken.firstName" placeholder="Voornaam" id="gebruikerVoornaam"><br>
+<input class="invoer" [(ngModel)]="ownerAanmaken.insertion" placeholder="Tussenvoegsel"><br>
+<input class="invoer" [(ngModel)]="ownerAanmaken.lastName" placeholder="Achternaam"><br>
+<input class="invoer" [(ngModel)]="ownerAanmaken.email" placeholder="Email adres"><br>
+<input class="invoer" [(ngModel)]="ownerAanmaken.username" placeholder="Gebruikersnaam"><br>
+<input class="invoer" [(ngModel)]="ownerAanmaken.password" placeholder="Wachtwoord"><br>
+<label class="button" id="opslaan">
+  <button (click)="postOwner()">Opslaan</button>
+</label>
+
+<br><br><br>
+
+<div>
+  <label>Voer gebruiker id# in: </label>
+  <input [(ngModel)]="id">
+  <button (click)="getOwnerById(id)">Haal gebruiker op</button>
+</div>
+
+<div *ngIf="owner">
+  <p>Gebruiker met id#{{id}}: {{ owner.firstName }} {{ owner.lastName }}</p>
+</div>
+
+<br>
+
+<div *ngIf="allOwner">
+  <h3>Gebruikers</h3>
+  <ul>
+      <li *ngFor="let owner of allOwner"><strong>{{ owner.firstName }} {{ owner.lastName }}</strong><br>{{ owner.email }}</li>
+      <!-- let = typescript versie van var (variabele)-->
+  </ul>
+</div>
